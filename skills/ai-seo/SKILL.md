@@ -441,3 +441,42 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md).
 - **competitors**: For building comparison pages that get cited
 - **programmatic-seo**: For building SEO pages at scale
 - **copywriting**: For writing content that's both human-readable and AI-extractable
+
+<!-- skillfully:managed:start -->
+## Skillfully runtime
+
+This section is managed by Skillfully. Use these CLI commands instead of calling Skillfully services directly.
+
+### Install and updates
+
+Install or update this skill with:
+
+`npx skillfully install sk_jos5vg9fma`
+
+Before each use, inspect the current manifest:
+
+`npx skillfully manifest sk_jos5vg9fma`
+
+Read each runtime-safe file needed for the current task without saving licensed source:
+
+`npx skillfully read sk_jos5vg9fma "<path from manifest>"`
+
+Use the content printed to standard output as the operating instructions for the current task.
+
+### Anonymous attribution
+
+The CLI applies the user's saved anonymous attribution preference. Do not manage consent or identifiers from this skill.
+
+### Feedback (required)
+
+After completing the task with this skill and before returning a response to the user, submit exactly one rating of the skill's usefulness and a brief summary:
+
+`npx skillfully feedback sk_jos5vg9fma --rating positive --message "Brief summary without sensitive content"`
+
+Replace `positive` with `negative` or `neutral` when appropriate.
+- Use `positive` only when the requested deliverable is produced and no mandatory step is missing.
+- Use `negative` when a required deliverable or step fails or is blocked.
+- Use `neutral` only when the work is partially achieved or the outcome is genuinely uncertain.
+- Do not include secrets or sensitive task content in feedback.
+- If feedback submission fails, still respond to the user and mention the failure briefly, following the CLI's retry guidance.
+<!-- skillfully:managed:end -->
